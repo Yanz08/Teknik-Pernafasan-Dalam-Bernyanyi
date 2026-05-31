@@ -1,0 +1,1800 @@
+/* ====================================
+   RESET
+==================================== */
+
+*{
+
+margin:0;
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html,
+body{
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+font-family:
+'Poppins',
+sans-serif;
+
+background:#050505;
+
+color:white;
+
+}
+
+/* ====================================
+   BODY
+==================================== */
+
+body{
+
+position:relative;
+
+}
+
+/* ====================================
+   PROGRESS BAR
+==================================== */
+
+#progress{
+
+position:fixed;
+
+top:0;
+left:0;
+
+height:4px;
+
+width:10%;
+
+background:white;
+
+z-index:9999;
+
+transition:.6s;
+
+}
+
+/* ====================================
+   TIMER
+==================================== */
+
+#timer{
+
+position:fixed;
+
+right:30px;
+bottom:25px;
+
+font-size:14px;
+
+font-weight:600;
+
+opacity:.8;
+
+z-index:999;
+
+}
+
+/* ====================================
+   SLIDE COUNTER
+==================================== */
+
+#indicator{
+
+position:fixed;
+
+right:30px;
+bottom:60px;
+
+padding:
+10px
+18px;
+
+background:
+rgba(
+255,
+255,
+255,
+.08
+);
+
+backdrop-filter:
+blur(15px);
+
+border-radius:12px;
+
+font-size:15px;
+
+font-weight:600;
+
+z-index:999;
+
+}
+
+/* ====================================
+   NAVBAR
+==================================== */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100px;
+
+display:flex;
+
+justify-content:space-between;
+align-items:center;
+
+padding:
+0
+50px;
+
+background:
+rgba(
+0,
+0,
+0,
+.5
+);
+
+backdrop-filter:
+blur(20px);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:22px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+.navbar ul{
+
+display:flex;
+
+gap:25px;
+
+list-style:none;
+
+}
+
+.navbar li{
+
+cursor:pointer;
+
+font-size:15px;
+
+font-weight:500;
+
+opacity:.7;
+
+transition:.3s;
+
+}
+
+.navbar li:hover{
+
+opacity:1;
+
+}
+
+.navbar li.active{
+
+opacity:1;
+
+font-weight:700;
+
+}
+
+/* ====================================
+   SLIDER
+==================================== */
+
+.slider{
+
+display:flex;
+
+width:1000vw;
+
+height:100vh;
+
+transition:
+transform
+.9s
+ease;
+
+}
+
+/* ====================================
+   SLIDES
+==================================== */
+
+.slide{
+
+width:100vw;
+height:100vh;
+
+flex-shrink:0;
+
+padding:
+120px
+70px
+50px;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+gap:60px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ====================================
+   LEFT RIGHT
+==================================== */
+
+.left,
+.right{
+
+width:50%;
+
+}
+
+/* ====================================
+   TYPOGRAPHY
+==================================== */
+
+h1{
+
+font-size:72px;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+h2{
+
+font-size:54px;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+}
+
+h3{
+
+font-size:21px;
+
+font-weight:300;
+
+margin-bottom:15px;
+
+}
+
+p{
+
+font-size:18px;
+
+line-height:1.5;
+
+opacity:.9;
+
+}
+
+li{
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+/* ====================================
+   IMAGE
+==================================== */
+
+img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:24px;
+
+}
+
+/* ====================================
+   HERO
+==================================== */
+
+.hero-title{
+
+max-width:800px;
+
+}
+
+.hero-line{
+
+width:100px;
+height:4px;
+
+background:white;
+
+margin:
+25px
+0;
+
+}
+
+.hero-info{
+
+font-size:24px;
+
+margin-bottom:20px;
+
+}
+
+.hero-image{
+
+height:70vh;
+
+object-fit:cover;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px
+rgba(
+255,
+255,
+255,
+.08
+);
+
+}
+
+/* ====================================
+   HERO BUTTON
+==================================== */
+
+.hero-button{
+
+display:inline-block;
+
+padding:
+16px
+32px;
+
+margin-top:25px;
+
+background:white;
+
+color:black;
+
+text-decoration:none;
+
+font-weight:600;
+
+border-radius:15px;
+
+}
+
+/* ====================================
+   GOAL CARD
+==================================== */
+
+.goal-card{
+
+padding:30px;
+
+margin-top:25px;
+
+background:
+rgba(
+255,
+255,
+255,
+.05
+);
+
+border:
+1px solid rgba(
+255,
+255,
+255,
+.08
+);
+
+border-radius:20px;
+
+backdrop-filter:
+blur(10px);
+
+}
+
+/* ====================================
+   LIST
+==================================== */
+
+ul{
+
+padding-left:25px;
+
+}
+
+ol{
+
+padding-left:25px;
+
+}
+
+/* ====================================
+   ACTIVE SLIDE
+==================================== */
+
+.slide{
+
+opacity:.4;
+
+transition:
+opacity
+.8s;
+
+}
+
+.slide.active{
+
+opacity:1;
+
+}
+
+/* ====================================
+   SCROLLBAR
+==================================== */
+
+::-webkit-scrollbar{
+
+display:none;
+
+}
+
+/* ====================================
+   CARD SYSTEM
+==================================== */
+
+.cards{
+
+display:flex;
+
+gap:30px;
+
+margin-top:40px;
+
+width:100%;
+
+}
+
+.card{
+
+flex:1;
+
+padding:35px;
+
+background:
+rgba(
+255,
+255,
+255,
+0.05
+);
+
+border:
+1px solid rgba(
+255,
+255,
+255,
+0.08
+);
+
+border-radius:25px;
+
+backdrop-filter:
+blur(15px);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-8px);
+
+box-shadow:
+0 20px 40px
+rgba(
+255,
+255,
+255,
+0.08
+);
+
+}
+
+.card h3{
+
+margin-bottom:20px;
+
+font-size:30px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+}
+
+/* ====================================
+   SLIDE 3
+==================================== */
+
+.slide3{
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.slide3 .cards{
+
+max-width:1400px;
+
+}
+
+.slide3 .card{
+
+min-height:260px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+/* ====================================
+   SLIDE 4
+==================================== */
+
+.slide4 .goal-card{
+
+margin-bottom:20px;
+
+}
+
+/* ====================================
+   SLIDE 5
+==================================== */
+
+.slide5 .goal-card{
+
+margin-bottom:20px;
+
+}
+
+/* ====================================
+   DIAPHRAGM HIGHLIGHT
+==================================== */
+
+.diaphragm-highlight{
+
+margin:
+30px
+0
+40px;
+
+padding:
+30px
+50px;
+
+background:
+linear-gradient(
+135deg,
+#ffffff,
+#d4d4d4
+);
+
+color:black;
+
+font-size:30px;
+
+font-weight:700;
+
+border-radius:25px;
+
+box-shadow:
+0 0 40px
+rgba(
+255,
+255,
+255,
+0.2
+);
+
+}
+
+/* ====================================
+   SLIDE 6
+==================================== */
+
+.slide6{
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.slide6 .cards{
+
+max-width:1200px;
+
+}
+
+/* ====================================
+   SLIDE 7
+==================================== */
+
+.summary-box{
+
+width:100%;
+
+max-width:900px;
+
+margin:
+30px auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.summary-box p{
+
+padding:25px;
+
+background:
+rgba(
+255,
+255,
+255,
+0.05
+);
+
+border-radius:20px;
+
+border:
+1px solid rgba(
+255,
+255,
+255,
+0.08
+);
+
+backdrop-filter:
+blur(10px);
+
+transition:.3s;
+
+}
+
+.summary-box p:hover{
+
+transform:
+translateX(8px);
+
+}
+
+/* ====================================
+   BREATHING TIMER
+==================================== */
+
+.breathing-timer{
+
+width:250px;
+
+height:250px;
+
+margin:
+40px auto;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+font-size:90px;
+
+font-weight:700;
+
+background:
+radial-gradient(
+circle,
+rgba(
+255,
+255,
+255,
+0.3
+),
+rgba(
+255,
+255,
+255,
+0.05
+)
+);
+
+box-shadow:
+0 0 40px
+rgba(
+255,
+255,
+255,
+0.2
+);
+
+animation:
+breathingPulse
+4s infinite;
+
+}
+
+@keyframes breathingPulse{
+
+0%{
+
+transform:
+scale(1);
+
+}
+
+50%{
+
+transform:
+scale(1.15);
+
+}
+
+100%{
+
+transform:
+scale(1);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 8
+==================================== */
+
+.slide8{
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+/* ====================================
+   SLIDE 9
+==================================== */
+
+.slide9{
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.slide9 .summary-box{
+
+max-width:1000px;
+
+}
+
+/* ====================================
+   SLIDE 10
+==================================== */
+
+.slide10{
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.closing{
+
+max-width:1000px;
+
+}
+
+.closing h1{
+
+font-size:100px;
+
+margin-bottom:20px;
+
+}
+
+.question{
+
+font-size:40px;
+
+margin-bottom:30px;
+
+}
+
+.quote{
+
+font-size:28px;
+
+font-style:italic;
+
+opacity:.8;
+
+}
+
+/* ====================================
+   GLOW TEXT
+==================================== */
+
+.hero-title,
+.slide10 h1{
+
+text-shadow:
+0 0 15px
+rgba(
+255,
+255,
+255,
+0.15
+);
+
+}
+
+/* ====================================
+   PREMIUM IMAGE
+==================================== */
+
+img{
+
+transition:
+transform .5s ease,
+box-shadow .5s ease;
+
+}
+
+img:hover{
+
+transform:
+scale(1.02);
+
+box-shadow:
+0 20px 50px
+rgba(
+255,
+255,
+255,
+0.08
+);
+
+}
+
+/* ====================================
+   ACTIVE CARD
+==================================== */
+
+.card,
+.goal-card,
+.summary-box p{
+
+transition:
+all .35s ease;
+
+}
+
+.card:hover,
+.goal-card:hover,
+.summary-box p:hover{
+
+box-shadow:
+0 15px 35px
+rgba(
+255,
+255,
+255,
+0.08
+);
+
+}
+
+/* ====================================
+   SECTION SPACING
+==================================== */
+
+.slide h2{
+
+max-width:1200px;
+
+}
+
+/* ====================================
+   FADE IN DEFAULT
+==================================== */
+
+.slide.active h1,
+.slide.active h2,
+.slide.active h3,
+.slide.active p,
+.slide.active li{
+
+animation:
+fadeInUp
+.8s ease;
+
+}
+
+@keyframes fadeInUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 1
+   CINEMATIC HERO
+==================================== */
+
+.slide1.active .hero-title{
+
+animation:
+heroReveal
+1.2s ease;
+
+}
+
+.slide1.active .hero-info{
+
+animation:
+heroReveal
+1.4s ease;
+
+}
+
+.slide1.active .hero-image{
+
+animation:
+heroImage
+1.6s ease;
+
+}
+
+@keyframes heroReveal{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+@keyframes heroImage{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(120px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 2
+   LEFT RIGHT REVEAL
+==================================== */
+
+.slide2.active .left{
+
+animation:
+leftReveal
+1s ease;
+
+}
+
+.slide2.active .right{
+
+animation:
+rightReveal
+1s ease;
+
+}
+
+@keyframes leftReveal{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(-80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+}
+
+@keyframes rightReveal{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 3
+   CARD CASCADE
+==================================== */
+
+.slide3.active .card:nth-child(1){
+
+animation:
+cardCascade
+.8s .1s forwards;
+
+opacity:0;
+
+}
+
+.slide3.active .card:nth-child(2){
+
+animation:
+cardCascade
+.8s .3s forwards;
+
+opacity:0;
+
+}
+
+.slide3.active .card:nth-child(3){
+
+animation:
+cardCascade
+.8s .5s forwards;
+
+opacity:0;
+
+}
+
+@keyframes cardCascade{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 4
+   PARALLAX
+==================================== */
+
+.slide4.active img{
+
+animation:
+parallaxReveal
+1.2s ease;
+
+}
+
+@keyframes parallaxReveal{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(120px)
+scale(1.1);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0)
+scale(1);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 5
+   FLOATING IMAGE
+==================================== */
+
+.slide5.active img{
+
+animation:
+floatingImage
+5s ease-in-out infinite;
+
+}
+
+@keyframes floatingImage{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-12px);
+
+}
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 6
+   DIAPHRAGMA GLOW
+==================================== */
+
+.slide6.active
+.diaphragm-highlight{
+
+animation:
+diaphragmGlow
+2s infinite;
+
+}
+
+@keyframes diaphragmGlow{
+
+0%{
+
+box-shadow:
+0 0 15px rgba(
+255,
+255,
+255,
+.15
+);
+
+}
+
+50%{
+
+box-shadow:
+0 0 45px rgba(
+255,
+255,
+255,
+.35
+);
+
+}
+
+100%{
+
+box-shadow:
+0 0 15px rgba(
+255,
+255,
+255,
+.15
+);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 7
+   CHECKLIST EFFECT
+==================================== */
+
+.slide7.active p{
+
+animation:
+checkReveal
+.8s ease;
+
+}
+
+@keyframes checkReveal{
+
+from{
+
+opacity:0;
+
+transform:
+translateX(-60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 8
+   TRAINING MODE
+==================================== */
+
+.slide8.active
+.breathing-timer{
+
+animation:
+breathingTraining
+4s infinite;
+
+}
+
+@keyframes breathingTraining{
+
+0%{
+
+transform:
+scale(1);
+
+}
+
+50%{
+
+transform:
+scale(1.25);
+
+}
+
+100%{
+
+transform:
+scale(1);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 9
+   SUMMARY FLOW
+==================================== */
+
+.slide9.active p{
+
+animation:
+summaryFlow
+1s ease;
+
+}
+
+@keyframes summaryFlow{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ====================================
+   SLIDE 10
+   CINEMATIC ENDING
+==================================== */
+
+.slide10.active h1{
+
+animation:
+endingTitle
+1.2s ease;
+
+}
+
+.slide10.active .question{
+
+animation:
+endingQuestion
+1.6s ease;
+
+}
+
+.slide10.active .quote{
+
+animation:
+endingQuote
+2s ease;
+
+}
+
+@keyframes endingTitle{
+
+from{
+
+opacity:0;
+
+transform:
+scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+scale(1);
+
+}
+
+}
+
+@keyframes endingQuestion{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+@keyframes endingQuote{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ====================================
+   NAVBAR PREMIUM
+==================================== */
+
+.navbar{
+
+border-bottom:
+1px solid rgba(
+255,
+255,
+255,
+.05
+);
+
+}
+
+/* ====================================
+   GLASSMORPHISM
+==================================== */
+
+.goal-card,
+.card,
+.summary-box p{
+
+background:
+rgba(
+255,
+255,
+255,
+.05
+);
+
+backdrop-filter:
+blur(20px);
+
+}
+
+/* ====================================
+   HOVER EFFECT
+==================================== */
+
+.navbar li{
+
+position:relative;
+
+}
+
+.navbar li::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+height:2px;
+
+background:white;
+
+transition:.3s;
+
+}
+
+.navbar li:hover::after{
+
+width:100%;
+
+}
+
+.navbar li.active::after{
+
+width:100%;
+
+}
+
+/* ====================================
+   RESPONSIVE TABLET
+==================================== */
+
+@media(max-width:1024px){
+
+.slide{
+
+flex-direction:column;
+
+text-align:center;
+
+overflow-y:auto;
+
+}
+
+.left,
+.right{
+
+width:100%;
+
+}
+
+.cards{
+
+flex-direction:column;
+
+}
+
+h1{
+
+font-size:52px;
+
+}
+
+h2{
+
+font-size:40px;
+
+}
+
+.hero-image{
+
+height:350px;
+
+}
+
+}
+
+/* ====================================
+   RESPONSIVE MOBILE
+==================================== */
+
+@media(max-width:768px){
+
+.navbar ul{
+
+display:none;
+
+}
+
+.slide{
+
+padding:
+100px
+20px
+40px;
+
+}
+
+h1{
+
+font-size:36px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+p,
+li{
+
+font-size:16px;
+
+}
+
+.hero-image{
+
+height:250px;
+
+}
+
+.breathing-timer{
+
+width:160px;
+
+height:160px;
+
+font-size:60px;
+
+}
+
+#indicator{
+
+font-size:13px;
+
+}
+
+}
+
+/* ====================================
+   PROJECTOR MODE
+==================================== */
+
+@media(min-width:1600px){
+
+h1{
+
+font-size:90px;
+
+}
+
+h2{
+
+font-size:68px;
+
+}
+
+p{
+
+font-size:28px;
+
+}
+
+li{
+
+font-size:24px;
+
+}
+
+}
+
+/* ====================================
+   PERFORMANCE
+==================================== */
+
+.slide{
+
+will-change:
+opacity,
+transform;
+
+}
+
+img{
+
+will-change:
+transform;
+
+}
+
+/* ====================================
+   REDUCED MOTION
+==================================== */
+
+@media
+(prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+}
+
+}
