@@ -12,11 +12,6 @@ document.querySelectorAll(
 ".slide"
 );
 
-const navbarItems =
-document.querySelectorAll(
-".navbar li"
-);
-
 const indicator =
 document.getElementById(
 "indicator"
@@ -57,21 +52,6 @@ slides[currentSlide]
 .classList.add(
 "active"
 );
-
-navbarItems.forEach(
-item =>
-item.classList.remove(
-"active"
-)
-);
-
-if(navbarItems[currentSlide]){
-
-navbarItems[currentSlide]
-.classList.add(
-"active");
-
-}
 
 indicator.innerHTML =
 `${currentSlide + 1} / ${totalSlides}`;
@@ -125,23 +105,6 @@ updateSlide();
 }
 
 }
-
-/* ====================================
-   CLICK SCREEN
-==================================== */
-
-document.addEventListener(
-"click",
-(e)=>{
-
-if(
-e.target.closest(".navbar")
-) return;
-
-nextSlide();
-
-}
-);
 
 /* ====================================
    KEYBOARD
@@ -225,28 +188,6 @@ toggleFullscreen();
 break;
 
 }
-
-}
-);
-
-/* ====================================
-   NAVBAR
-==================================== */
-
-navbarItems.forEach(
-(item,index)=>{
-
-item.addEventListener(
-"click",
-()=>{
-
-currentSlide =
-index;
-
-updateSlide();
-
-}
-);
 
 }
 );
@@ -454,4 +395,117 @@ updateSlide();
 
 console.log(
 "Micro Teaching Presentation Ready"
+);
+
+/* ====================================
+   BREATHING TRAINER
+==================================== */
+
+const startBreathing =
+document.getElementById(
+"startBreathing"
+);
+
+if(startBreathing){
+
+const cards = [
+
+{
+card:
+document.getElementById("card1"),
+
+counter:
+document.getElementById("step1")
+},
+
+{
+card:
+document.getElementById("card2"),
+
+counter:
+document.getElementById("step2")
+},
+
+{
+card:
+document.getElementById("card3"),
+
+counter:
+document.getElementById("step3")
+}
+
+];
+
+async function runBreathingExercise(){
+
+startBreathing.disabled = true;
+
+for(
+let i = 0;
+i < cards.length;
+i++
+){
+
+cards.forEach(item=>{
+
+item.card.classList.remove(
+"active"
+);
+
+item.counter.textContent = "4";
+
+});
+
+cards[i].card.classList.add(
+"active"
+);
+
+for(
+let count = 4;
+count >= 1;
+count--
+){
+
+cards[i].counter.textContent =
+count;
+
+await new Promise(
+resolve =>
+setTimeout(resolve,1000)
+);
+
+}
+
+}
+
+cards.forEach(item=>{
+
+item.card.classList.remove(
+"active"
+);
+
+item.counter.textContent = "4";
+
+});
+
+startBreathing.disabled = false;
+
+}
+
+startBreathing.addEventListener(
+"click",
+runBreathingExercise
+);
+
+}
+
+document
+.querySelector(".interactive-zone")
+.addEventListener(
+"click",
+e => {
+
+e.stopPropagation();
+
+}
 );
